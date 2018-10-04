@@ -1,0 +1,26 @@
+%%==============================
+\cleardoublepage
+\renewcommand{\contentsname}{\hfill TABLE OF CONTENTS\hfill}
+\tableofcontents
+%{\let\oldnumberline\numberline
+%	\renewcommand{\numberline}{\chaptertitlename~\oldnumberline}
+%	\tableofcontents}
+%%==============================
+\cleardoublepage
+\renewcommand{\listfigurename}{\hfill LIST OF FIGURES\hfill}
+\addcontentsline{toc}{chapter}{LIST OF FIGURES}
+{\let\oldnumberline\numberline
+\renewcommand{\numberline}{\figurename~\oldnumberline}
+\listoffigures}
+%%==============================
+\cleardoublepage
+\renewcommand{\listtablename}{\hfill LIST OF TABLES\hfill}
+\addcontentsline{toc}{chapter}{LIST OF TABLES}
+{\let\oldnumberline\numberline
+\renewcommand{\numberline}{\tablename~\oldnumberline}
+\listoftables}
+%%==============================
+\cleardoublepage
+\addcontentsline{toc}{chapter}{LIST OF ABBREVIATIONS}
+\glsaddall{acronym}
+\printterms[database=acronym,columns=1,style=indexalign]

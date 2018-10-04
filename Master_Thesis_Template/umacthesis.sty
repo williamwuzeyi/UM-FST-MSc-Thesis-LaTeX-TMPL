@@ -1,0 +1,102 @@
+%%===Modified By William WU=====
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%%==============================
+\usepackage{datagidx}
+%\usepackage[acronym]{glossaries}
+%\usepackage{tracklang}
+%%==============================
+\usepackage{afterpage}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usepackage{setspace}
+\usepackage{layouts}
+\usepackage{titletoc}
+\usepackage[titles]{tocloft}
+\renewcommand{\cftdot}{.}
+\renewcommand{\cftdotsep}{1}
+\renewcommand{\cftaftertoctitle}{\thispagestyle{umempty}}
+\renewcommand{\cfttoctitlefont}{\normalsize}
+\renewcommand{\cftloftitlefont}{\normalsize}
+\renewcommand{\cftlottitlefont}{\normalsize}
+%%==============================
+\usepackage{calc}
+\hyphenation{op-tical net-works semi-conduc-tor}
+\usepackage{float}
+\usepackage{amsmath,amssymb,amsthm,units}
+\usepackage{amscd,empheq}
+\usepackage[justification=centering,font=singlespacing,listformat=simple]{caption}
+\usepackage{mathtools}
+\usepackage{url}
+%%==============================
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{subfloat}
+\usepackage{grffile}
+\usepackage{array}
+\usepackage{rotating}
+%\usepackage{subcaption}
+%%==============================
+\usepackage{icomma}
+\usepackage{bm}
+\hyphenation{op-tical net-works semi-conduc-tor}
+%%============tikz==============
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows}% requires at least two sets of {}
+%%==============================
+\setcounter{MaxMatrixCols}{12}
+\usepackage[bookmarks=true,pdftex,pagebackref=false]{hyperref}
+\makeatletter
+% do the same as notoccite on top of the redefinitions by hyperref
+\AtBeginDocument{%
+\patchcmd{\@starttoc}{\begingroup}{\begingroup\@fileswfalse}{}{}%
+\patchcmd{\@starttoc}{\if@filesw}{\endgroup\begingroup\if@filesw}{}{}%
+}
+\makeatother
+%%==============================
+\usepackage{xstring}
+\usepackage{siunitx}
+\usepackage[uppercase]{titlesec}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{umpreliminary}{
+\fancyhf{}
+\fancyfoot[CO,CE]{\thepage}}
+\fancypagestyle{umplain}{
+\fancyhf{}
+\fancyhead[CO,CE]{\thepage}}
+\fancypagestyle{umempty}{
+\fancyhf{}}
+\usepackage{multirow}
+\renewcommand{\multirowsetup}{\centering}
+\usepackage{lscape}
+\usepackage{cite}
+\usepackage{threeparttable}
+\usepackage{enumerate}
+%%==============================
+\titleformat{\chapter}[hang]{\centering\normalsize\uppercase}{\MakeUppercase{\chaptertitlename} \thechapter\ :}{1em}{}
+\titlespacing{\chapter}{0pt}{*1.5}{*4}{}
+\titlecontents{chapter}[0pt]{\normalsize}{\MakeUppercase{\chaptertitlename} \thecontentslabel: }{}{\titlerule*[0.4pc]{.}\contentspage\hspace*{0pt}}[]
+\titleformat{\section}[hang]{\normalsize\uppercase}{\thesection}{1em}{}
+\titlespacing{\section}{0pt}{*1.5}{\wordsep}{}
+\titleformat{\subsection}[hang]{\normalsize\scshape}{\thesubsection}{1em}{}
+\titlespacing{\subsection}{0pt}{*1.5}{\wordsep}{}
+\titleformat{\subsubsection}[hang]{\normalsize}{\thesubsubsection}{1em}{}
+\titlespacing{\subsubsection}{0pt}{*1.5}{\wordsep}{}
+%%==============================
+\usepackage[titletoc]{appendix}
+%%==============================
+\hypersetup{
+pdfdisplaydoctitle=true,%
+bookmarksnumbered=true,%
+%colorlinks,
+citecolor= green
+%hidelinks,
+bookmarksopen=true,
+ pdfauthor={},
+ pdftitle ={},
+ pdfsubject={},
+pdfkeywords={}
+}

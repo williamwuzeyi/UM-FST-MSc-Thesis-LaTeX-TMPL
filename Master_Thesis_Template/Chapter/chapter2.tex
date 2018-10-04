@@ -1,0 +1,34 @@
+\chapter{\uppercase{[Type Chapter Title]}}
+[Type Chapter]
+\section{\uppercase{[Type Chapter Section Title]}}
+[Type Chapter Section]
+\subsection{\textsc{[Type Chapter Subsection Title]}}
+[Type Chapter Subsection]
+\subsubsection{[Type Chapter Subsubsection Title]}
+[Type Chapter Subsubsection]
+\subsubsection{Figure}
+Figure \ref{fig:2:1}, Figure \ref{fig:2:2a} and Figure \ref{fig:2:2}(b)--(c) show the same example.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.9\linewidth]{Figures/Example}
+	\caption{Example of a figure.}
+	\label{fig:2:1}
+\end{figure}
+
+\begin{figure}[!htb]
+	\centering
+	\subfloat[]{\includegraphics[width=0.45\linewidth]{Figures/Example}
+		\label{fig:2:2a}}
+	\hfil
+	\subfloat[]{\includegraphics[width=0.45\linewidth]{Figures/Example}
+		\label{fig:2:2b}}
+	\hfil
+	\subfloat[]{\includegraphics[width=0.45\linewidth]{Figures/Example}
+		\label{fig:2:2c}}
+	\hfil
+	\subfloat[]{\includegraphics[width=0.45\linewidth]{Figures/Example}
+		\label{fig:2:2d}}
+	\caption{Example of multi-figure.}
+	\label{fig:2:2}
+\end{figure}
